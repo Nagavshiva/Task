@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* Make the container responsive */
+.container {
+  display: flex;
+}
+
+/* Style the left card */
+.left-card {
+  width: 50%;
+  margin: 10px;
+  background-color: rgb(189, 177, 200);
+}
+
+/* Style the right cards */
+.right-cards {
+  width: 60%;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.left-card img {
+  width: 100%;
+}
+
+/* Style each right card */
+.right-card {
+  width: 43%;
+  height: 330px;
+  margin: 10px 17px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.right-card img {
+  width: 100%;
+  height: 150px;
+}
+
+.left-card h2{
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(18, 59, 135);
+}
+
+.left-card p{
+  color: rgb(73, 77, 81);
+  text-align: center;
+  margin-top: 30px;
+}
+.left-card button{
+ background-color: blueviolet;
+ color: whitesmoke;
+ padding: 20px;
+ border-radius: 13px;
+ border: none;
+ outline: none;
+margin:40px 190px;
+}
+
+.right-cards h2 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.right-cards p {
+  color: rgb(104, 115, 125);
+  text-align: center;
+}
+
+/* In mobile screen, Cards should be displayed one by one starting from  left most card */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .left-card,
+  .right-cards {
+    width: 100vw;
+  }
+
+}
+
+@media screen and (max-width: 990px) {
+  .right-cards {
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  .right-card p {
+    max-height: 50px;
+    overflow: auto;
+    color: rgb(104, 115, 125);
+    text-align: center;
+  }
+}

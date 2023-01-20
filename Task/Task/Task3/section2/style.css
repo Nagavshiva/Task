@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: azure;
+}
+
+.container img {
+    width: 100%;
+    height: 500px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 2fr));
+    justify-items: center;
+    height: 200px;
+    grid-gap: 2rem;
+    margin: 1rem;
+}
+
+.card {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card h4,
+p {
+    text-align: center;
+    margin-top:25px;
+}
+
+.card:hover {
+    background-color: gray;
+    transform: scale(1.1);
+}
+
+.card:nth-child(3) {
+    background-color: rgb(93, 90, 90);
+}
